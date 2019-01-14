@@ -11,11 +11,11 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 build:
-  number: 0
+  number: 1000
   entry_points:
     - docker-make = dockermake.__main__:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
