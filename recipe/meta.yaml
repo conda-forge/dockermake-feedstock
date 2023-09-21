@@ -11,23 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-
-build:
-  number: 2
   entry_points:
     - docker-make = dockermake.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
     - docker-py >=3.2
     - future
-    - python
+    - python >=3.6
     - pyyaml
     - termcolor
 
